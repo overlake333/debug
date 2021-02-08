@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import Splash from './components/Splash';
-import Plans from './components/Parent/Plans';
+import Splash from './components/Splashes';
+import Plans from './components/Parents/Plans';
 import Counter from './components/Counter/Counter';
 
 function App() {
@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <Navbar />
       <Splash />
-      <Counter />
       <Plans />
     </div>
   );

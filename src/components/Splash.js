@@ -1,6 +1,6 @@
 import React from 'react';
 import './Splash.css';
-import alien from '../images/img-2.svg';
+import alien from './images/img-2.svg';
 
 const Splash = (props) => {
     return (

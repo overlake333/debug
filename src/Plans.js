@@ -16,13 +16,13 @@ class Plans extends Component {
 }
 
 class Child extends Component {
-    render() {
+    render() (
         return(
             <div>
                 <h1 id="quote"> {this.props.dataFromParent} </h1>
             </div>
         )
-    }
+    )
 }
 
 export default Plans;

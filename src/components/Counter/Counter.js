@@ -23,16 +23,16 @@ class Counter extends Component {
   }
 }
 
-const MinusButton = ({count, update}) => {
-    return(
-      <button className='btn--primary' id="count" onClick={() => update(count - 1)}>-</button>
-    )
-  }
+// const MinusButton = ({count, update}) => {
+//     return(
+//       <button className='btn--primary' id="count" onClick={() => update(count - 1)}>-</button>
+//     )
+//   }
   
-const PlusButton = ({count, update}) => {
-    return(
-        <button className='btn--primary' id="count" onClick={() => update(count + 1)}>+</button>
-    )
-};
+// const PlusButton = ({count, update}) => {
+//     return(
+//         <button className='btn--primary' id="count" onClick={() => update(count + 1)}>+</button>
+//     )
+// };
 
 export default Counter;
