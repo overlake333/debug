@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems";
 import './Navbar.css';
-import { Button } from './Button'
+import {Link} from 'react-router-dom';
 class Navbar extends Component {
     state = { clicked: false }
 
@@ -19,9 +19,7 @@ class Navbar extends Component {
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item,index) => {
                         return (
-                            <li key={index} onClick = {() => {this.props.changeCurrPage(item.title)}}>
-                                {item.title}
-                            </li>
+                            <Link to={`/${item.title}`}>{item.title}</Link>                
                         )
                     })}
                 </ul>

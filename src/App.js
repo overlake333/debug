@@ -3,8 +3,14 @@ import Navbar from './components/Navbar/Navbar';
 import Splash from './components/Splashes/Splash';
 import Sightings from './components/Sightings';
 import { Component } from 'react';
-import Plans from './components/Parents/Plans'
-import UFOs from './components/UFOs'
+import Plans from './components/Parents/Plans';
+import UFOs from './components/UFOs';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 class App extends Component {
   constructor(props){
@@ -34,9 +40,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navbar changeCurrPage = {this.changeCurrPage}/>
-        {this.renderPage()}
-        <Plans/>
+        <Router>
+          <Navbar/>
+          <Switch>
+            <Route path="/sightings">
+              <Sightings />
+            </Route>
+            <Route path="/plans">
+              <Plans />
+            </Route>
+            <Route path="/ufos">
+              <UFOs />
+            </Route>
+            <Route path="/">
+              <Splash />
+            </Route>
+          </Switch>
+       </Router>
       </div>
     );
   }
