@@ -19,29 +19,11 @@ class App extends Component {
       currPage: "Home"
     }
   }
-
-  changeCurrPage = (newCurrPage) => {
-    console.log(newCurrPage)
-    this.setState({
-      currPage: newCurrPage,
-    })
-  }
-
-  renderPage = () => {
-    if(this.state.currPage === "UFOs"){
-      return <UFOs/>
-    } else if(this.state.currPage === "Sightings") {
-      return <Sightings/>
-    } else{
-      return <Splash/>
-    }
-  }
-
   render() {
     return (
       <div className="App">
         <Router>
-           <Navbar changeCurrPage = {this.changeCurrPage}/>
+           <Navbar/>
           <Switch>
             <Route path="/sightings">
               <Sightings />
