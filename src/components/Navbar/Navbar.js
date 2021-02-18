@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { MenuItems } from "./MenuItems";
 import './Navbar.css';
-import { Button } from './Button'
+import {Link} from 'react-router-dom';
+
 class Navbar extends Component {
     state = { clicked: false }
 
@@ -17,13 +18,11 @@ class Navbar extends Component {
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItems.map((item,index) => {
-                        return (
-                            <li key={index} onClick = {() => {this.props.changeCurrPage(item.title)}}>
-                                {item.title}
-                            </li>
-                        )
-                    })}
+                {MenuItems.map((item,index) => {
+                    return (
+                        <Link to={`/${item.title}`}>{item.title}</Link>               
+                    )
+                })}
                 </ul>
             </nav>
         )
